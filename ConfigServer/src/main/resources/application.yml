@@ -1,0 +1,33 @@
+# Конфигурация порта
+server:
+  port: 8888
+
+# Конфигурация Eureka
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server:8761/eureka/
+  instance:
+    prefer-ip-address: true
+
+# Конфигурация Spring Cloud Config
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/example/pawnshop-config-repo # URL Git-репозитория
+          search-paths: config # Путь к конфигурациям в репозитории
+          default-label: main # Основная ветка
+          timeout: 10 # Таймаут подключения к Git
+          clone-on-start: true # Клонировать репозиторий при старте
+          force-pull: true # Принудительное обновление при запросе
+
+# Конфигурация Actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info, refresh # Включение конечных точек Actuator

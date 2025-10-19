@@ -1,0 +1,12 @@
+spring:
+  r2dbc:
+    url: r2dbc:h2:mem:///loandb?options=DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    username: sa
+    password:
+
+# prod
+#spring:
+#  r2dbc:
+#    url: r2dbc:postgresql://loan-db:5432/loan_db
+#    username: user
+#    password: password

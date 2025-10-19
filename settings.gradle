@@ -1,0 +1,5 @@
+include 'CustomerService'
+include 'PawnItemService'
+include 'LoanService'
+include 'ConfigServer'
+rootProject.name = 'Pawnshop-MS'

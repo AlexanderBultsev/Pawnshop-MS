@@ -1,0 +1,32 @@
+# Конфигурация порта
+server:
+  port: 8081
+
+# Конфигурация Eureka
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server:8761/eureka/
+  instance:
+    prefer-ip-address: true
+
+spring:
+  # Конфигурация базы данных
+  r2dbc:
+    url: ${DB_URL:r2dbc:h2:mem:///customerdb?options=DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE} # H2 для разработки
+    username: ${DB_USERNAME:sa}
+    password: ${DB_PASSWORD:}
+
+  # Конфигурация безопасности OAuth2
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://authorization-server:9000
+
+# Для продакшена (определяется в Git через Config Server)
+#spring:
+#  r2dbc:
+#    url: r2dbc:postgresql://customer-db:5432/customer_db
+#    username: user
+#    password: password

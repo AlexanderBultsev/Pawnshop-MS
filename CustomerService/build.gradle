@@ -1,0 +1,29 @@
+description = 'CustomerService'
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-webflux' // Реактивный веб-слой
+	implementation 'org.springframework.boot:spring-boot-starter-data-r2dbc' // R2DBC для работы с БД
+	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client' // Service Discovery
+	implementation 'org.springframework.cloud:spring-cloud-starter-config' // Spring Cloud Config
+	implementation 'org.springframework.cloud:spring-cloud-starter-bootstrap' // Поддержка bootstrap.yml
+
+	implementation 'org.springframework.boot:spring-boot-starter-security' // Spring Security
+	implementation 'org.springframework.security:spring-security-oauth2-resource-server' // OAuth2 Resource Server
+	implementation 'org.springframework.security:spring-security-oauth2-jose' // Поддержка JWT
+
+	implementation 'io.projectreactor:reactor-core' // Project Reactor
+	implementation 'org.projectlombok:lombok' // Lombok
+	annotationProcessor 'org.projectlombok:lombok' // Lombok
+
+	runtimeOnly 'org.postgresql:r2dbc-postgresql' // Драйвер PostgreSQL для R2DBC
+	runtimeOnly 'org.postgresql:postgresql'
+	runtimeOnly 'com.h2database:h2'
+	runtimeOnly 'io.r2dbc:r2dbc-h2'
+
+	testImplementation 'io.projectreactor:reactor-test' // Тесты для реактивных потоков
+}
+
+jar {
+	enabled = true
+	archiveFileName = "${project.name}-${project.version}.jar"
+}

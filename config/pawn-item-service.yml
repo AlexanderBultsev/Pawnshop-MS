@@ -1,0 +1,12 @@
+spring:
+  r2dbc:
+    url: r2dbc:h2:mem:///pawnitemdb?options=DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    username: sa
+    password:
+
+# prod
+#spring:
+#  r2dbc:
+#    url: r2dbc:postgresql://pawn-item-db:5432/pawn_item_db
+#    username: user
+#    password: password
