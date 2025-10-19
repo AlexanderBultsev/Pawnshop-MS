@@ -18,9 +18,9 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/example/pawnshop-config-repo # URL Git-репозитория
+          uri: https://github.com/AlexanderBultsev/Pawnshop-MS # URL Git-репозитория
           search-paths: config # Путь к конфигурациям в репозитории
-          default-label: main # Основная ветка
+          default-label: master # Основная ветка
           timeout: 10 # Таймаут подключения к Git
           clone-on-start: true # Клонировать репозиторий при старте
           force-pull: true # Принудительное обновление при запросе

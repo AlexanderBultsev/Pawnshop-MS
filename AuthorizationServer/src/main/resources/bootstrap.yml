@@ -1,8 +1,8 @@
 # Конфигурация для загрузки настроек из Spring Cloud Config
 spring:
   application:
-    name: loan-service
+    name: authorization-server
   cloud:
     config:
-      uri: http://localhost:8888
+      uri: http://config-server:8888
       fail-fast: true

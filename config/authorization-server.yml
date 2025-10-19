@@ -1,18 +1,18 @@
 spring:
   security:
     oauth2:
-      resourceserver:
+      authorizationserver:
         jwt:
           issuer-uri: http://authorization-server:9000
 
   r2dbc:
-    url: r2dbc:h2:mem:///pawnitemdb?options=DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    url: r2dbc:h2:mem:///authdb?options=DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
     username: sa
     password:
 
 # prod
 #spring:
 #  r2dbc:
-#    url: r2dbc:postgresql://pawn-item-db:5432/pawn_item_db
+#    url: r2dbc:postgresql://auth-db:5432/auth_db
 #    username: user
 #    password: password
