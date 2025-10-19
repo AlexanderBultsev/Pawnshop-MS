@@ -12,6 +12,7 @@
             <option value="$PROJECT_DIR$/AuthorizationServer" />
             <option value="$PROJECT_DIR$/ConfigServer" />
             <option value="$PROJECT_DIR$/CustomerService" />
+            <option value="$PROJECT_DIR$/EurekaServer" />
             <option value="$PROJECT_DIR$/LoanService" />
             <option value="$PROJECT_DIR$/PawnItemService" />
           </set>

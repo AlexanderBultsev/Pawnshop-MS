@@ -1,0 +1,11 @@
+# Конфигурация порта
+server:
+  port: 8761
+
+# Конфигурация Eureka
+eureka:
+  client:
+    register-with-eureka: false # Не регистрировать себя как клиент
+    fetch-registry: false # Не запрашивать реестр
+  server:
+    enable-self-preservation: true

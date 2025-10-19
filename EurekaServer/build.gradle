@@ -1,0 +1,10 @@
+description = 'EurekaServer'
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web' // Web
+    implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-server' // Eureka server
+    implementation 'org.springframework.cloud:spring-cloud-starter-config' // Spring Cloud Config
+    implementation 'org.springframework.cloud:spring-cloud-starter-bootstrap' // Поддержка bootstrap.yml
+    implementation 'org.springframework.boot:spring-boot-starter-actuator' // Actuator
+}
+

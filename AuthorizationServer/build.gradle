@@ -2,7 +2,7 @@ description = 'AuthorizationServer'
 
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-web' // Реактивный веб-слой
+	implementation 'org.springframework.boot:spring-boot-starter-webflux' // Реактивный веб-слой
 	implementation 'org.springframework.boot:spring-boot-starter-data-r2dbc' // R2DBC для работы с БД
 	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client' // Service Discovery
 	implementation 'org.springframework.cloud:spring-cloud-starter-config' // Spring Cloud Config

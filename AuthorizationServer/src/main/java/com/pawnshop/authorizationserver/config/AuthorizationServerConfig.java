@@ -17,11 +17,9 @@ import org.springframework.security.oauth2.core.AuthorizationGrantType;
 import org.springframework.security.oauth2.core.ClientAuthenticationMethod;
 import org.springframework.security.oauth2.server.authorization.client.RegisteredClient;
 import org.springframework.security.oauth2.server.authorization.client.RegisteredClientRepository;
-import org.springframework.security.oauth2.server.authorization.config.annotation.web.configuration.OAuth2AuthorizationServerConfiguration;
 import org.springframework.security.oauth2.server.authorization.settings.ClientSettings;
 import org.springframework.security.oauth2.server.authorization.settings.TokenSettings;
 import org.springframework.security.web.server.SecurityWebFilterChain;
-import org.springframework.security.web.server.util.matcher.PathPatternParserServerWebExchangeMatcher;
 import reactor.core.publisher.Mono;
 
 import java.security.KeyPair;
