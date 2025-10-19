@@ -2,8 +2,7 @@ spring:
   security:
     oauth2:
       authorizationserver:
-        jwt:
-          issuer-uri: http://authorization-server:9000
+        issuer: http://localhost:9000
 
   r2dbc:
     url: r2dbc:h2:mem:///authdb?options=DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE

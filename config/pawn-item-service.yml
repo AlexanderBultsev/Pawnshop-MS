@@ -3,7 +3,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://authorization-server:9000
+          issuer-uri: http://localhost:9000
 
   r2dbc:
     url: r2dbc:h2:mem:///pawnitemdb?options=DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
